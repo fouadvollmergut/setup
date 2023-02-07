@@ -1,0 +1,68 @@
+{
+  "name": "fouadvollmergut/setup",
+  "description": "Setup Wordpress Project",
+  "authors": [
+    {
+      "name"    : "Moritz Gut",
+      "homepage": "https://fouadvollmergut.de/"
+    }
+  ],
+  "type": "project",
+  "repositories": [
+    {
+        "type": "composer",
+        "url" : "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "fouadvollmergut/plugin-easy-init",
+        "version": "1.0.4",
+        "type": "wordpress-plugin",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:fouadvollmergut/plugin-easy-init.git",
+            "reference": "master"
+        }
+      } 
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "fouadvollmergut/theme",
+        "version": "2.2.7",
+        "type": "wordpress-theme",
+        "source": {
+          "type": "git",
+          "url": "git@github.com:fouadvollmergut/theme.git",
+          "reference": "master"
+        }
+      } 
+    }
+  ],
+  "config"      : {
+    "vendor-dir": "wp-content/vendor",
+    "allow-plugins": {
+      "johnpbloch/wordpress-core-installer": true,
+      "composer/installers": true
+    }
+  },
+  "require"     : {
+    "johnpbloch/wordpress": ">=4.9",
+    "rarst/fragment-cache": "^1.3",
+    "rarst/update-blocker": "^1.1"
+  },
+  "require-dev" : {
+    "wpackagist-plugin/complianz-gdpr": "*",
+    "wpackagist-plugin/gdy-modular-content": "*",
+    "fouadvollmergut/plugin-easy-init": "*",
+    "fouadvollmergut/theme": "*"
+  },
+  "extra": {
+    "wordpress-install-dir": "./",
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}
