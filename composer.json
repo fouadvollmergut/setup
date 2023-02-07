@@ -38,6 +38,19 @@
           "reference": "master"
         }
       } 
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "fouadvollmergut/fvw-framework",
+        "version": "29.3.1",
+        "type": "wordpress-theme",
+        "source": {
+          "type": "git",
+          "url": "git@github.com:fouadvollmergut/fvw-framework.git",
+          "reference": "master"
+        }
+      } 
     }
   ],
   "config"      : {
@@ -55,6 +68,7 @@
   "require-dev" : {
     "wpackagist-plugin/complianz-gdpr": "*",
     "wpackagist-plugin/gdy-modular-content": "*",
+    "fouadvollmergut/fvw-framework": "*",
     "fouadvollmergut/plugin-easy-init": "*",
     "fouadvollmergut/theme": "*"
   },
